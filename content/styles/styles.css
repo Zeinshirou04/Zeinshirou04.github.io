@@ -502,6 +502,7 @@ input[type=text] {
 
 #submitDoa:is(:hover, :focus) {
     background-color: rgb(203, 203, 203);
+    border: 0px;
     transition: 0.4s;
 }
 
