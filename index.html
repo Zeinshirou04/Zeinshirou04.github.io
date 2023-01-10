@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Import Viewport Width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Import External CSS -->
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Sultan and Melissa Wedding Invitation | Web Invitation Card</title>
+</head>
+<body>
+    <article class="container">
+        <section class="pos-relative" id="front-left">
+            <img class="pos-absolute" src="./images/dl.beatsnoop.com-3000-VYKZ3xysHr.jpg" alt="Invitiation Card Front Layer Image" id="front-layer-image">
+            <div class="pos-absolute layer"></div>
+        </section>
+        <section class="container pos-relative" id="front-right">
+            <img class="pos-absolute border-flower" id="flower-center-bottom" src="./images/floral-border-other-invite.png" alt="">
+            <img class="pos-absolute border-flower" id="flower-center-top" src="./images/floral-border-other-invite.png" alt="">
+            <h1>Special Wedding Invitation</h1>
+            <h2>For :</h2>
+            <p id="guestName">Mr. Arthur Carmenia, B.Cs, M. Com, D.Cs</p>
+            <p>Ms. Leonie Victoire, B.sc, M.Sc</p>
+            <br>
+            <p>We pleased you to attend our Wedding Ceremony</p>
+            <p>Please open your Invitiation</p>
+            <!-- untuk Action jangan lupa diganti action="./content/index.html" -->
+            <form onsubmit="changeHtml()" action="#"> 
+                <input type="submit" id="open-invit" value="Open">
+            </form>
+            </section>
+        </section>
+    </article>
+    <!-- Import External JavaScript -->
+    <script src="./config/config.js"></script>
+</body>
+</html>

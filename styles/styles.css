@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@300;400;500&family=Lato&family=Montserrat:wght@400;500&family=Parisienne&family=Playfair+Display:wght@400;500;700&family=Roboto:wght@400;500&family=Tangerine:wght@400;700&display=swap');
+
+@keyframes audSpin {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+/* @keyframes flowerSpin {
+    from {
+        transform: scaleX(-1) scaleY(-1) rotate(30deg);
+    } to {
+        transform: scaleX(-1) scaleY(-1) rotate(-30deg);
+    }
+} */
+
+@keyframes changeHtml {
+    from {
+        opacity: 100%;
+    } to {
+        opacity: 0%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.pos-absolute {
+    position: absolute;
+}
+
+.layer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.364);
+}
+
+.editTombol {
+    color: black;
+    align-self: center;
+}
+
+#front-left {
+    width: 60%;
+    height: 100%;
+}
+
+#aud-wrapper {
+    bottom: 0;
+    text-decoration: none;
+    color: black;
+}
+
+#aud-controller {
+    display: flex;
+    margin: 12px;
+    bottom: 0;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    background-color: rgba(255, 219, 173, 0.755);
+}
+
+#aud-ico {
+    width: 25px;
+    left: 15%;
+    right: 22%;
+    top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(0deg);
+    /* animation: audSpin 10s linear infinite; */
+}
+
+#front-right {
+    padding: 0px 140px;
+    width: 40%;
+    height: 100%;
+    background-image: 
+    linear-gradient(to right, rgba(21, 21, 21, 0.858) 100%, rgba(33, 33, 33, 0.912) 50%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+#front-right h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+#front-right h2 {
+    margin: 4px 0px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+#front-right p {
+    margin: 2px 0px;
+    text-align: center;
+}
+
+#front-right > a > button p {
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#flower-center-top {
+    top: -10px;
+    left: auto;
+    right: auto;
+    transform: scaleX(-1) scaleY(-1) rotate(30deg);
+    /* animation-name: flowerSpin;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite; */
+}
+
+#flower-center-bottom {
+    bottom: 0px;
+    left: auto;
+    right: auto;
+    transform: scaleX(-1);
+}
+
+.border-flower {
+    width: 25%;
+}
+
+#front-layer-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 0px 42px black;
+}
+
+#open-invit {
+    margin: 12px;
+    padding: 6px 16px;
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.59);
+}
+
+#open-invit:hover {
+    margin: 12px;
+    padding: 6px 16px;
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.636);
+}
