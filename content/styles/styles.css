@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@300;400;500&family=Lato&family=Montserrat:wght@400;500&family=Parisienne&family=Playfair+Display:wght@400;500;700&family=Roboto:wght@400;500&family=Tangerine:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: proximity;
+}
+
+@keyframes openedHtml {
+    from {
+        opacity: 0%;
+    } to {
+        opacity: 100%;
+    }
+}
+
+@keyframes cornerLeft {
+    0% {
+        transform: scaleX(-1) rotate(270deg) translate(0px, 0px);
+    } 50% {
+        transform: scaleX(-1) rotate(270deg) translate(12px, 12px);
+    } 100% {
+        transform: scaleX(-1) rotate(270deg) translate(0px, 0px);
+    }
+}
+
+@keyframes cornerRight {
+    0% {
+        transform: rotate(270deg) translate(0px, 0px);
+    } 50% {
+        transform: rotate(270deg) translate(12px, 12px);
+    } 100% {
+        transform: rotate(270deg) translate(0px, 0px);
+    }
+}
+
+@keyframes cornerMidFirst {
+    0% {
+        transform: rotate(0deg) translate(0px, 0px);
+    } 50% {
+        transform: rotate(0deg) translate(12px, 0px);
+    } 100% {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+}
+
+@keyframes cornerMidSec {
+    0% {
+        transform: scaleX(-1) rotate(180deg) translate(0px, 0px);
+    } 50% {
+        transform: scaleX(-1) rotate(180deg) translate(12px, 0px);
+    } 100% {
+        transform: scaleX(-1) rotate(180deg) translate(0px, 0px);
+    }
+}
+
+@keyframes cornerMidTrd {
+    0% {
+        transform: rotate(90deg) translate(0px, 0px);
+    } 50% {
+        transform: rotate(90deg) translate(0px, 12px);
+    } 100% {
+        transform: rotate(90deg) translate(0px, 0px);
+    }
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    animation-name: openedHtml;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+#bagAtas {
+    width: 100vw;
+    height: 100vh;
+}
+
+#bagTengah {
+    width: 100vw;
+    height: 100vh;
+}
+
+#baru {
+    width: 100vw;
+    height: 100vh;
+}
+
+#bagAtas {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#bagAtas > h1 {
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+#bagAtas > p {
+    max-width: 100vw;
+}
+
+#bagAtas > h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+#bagAtas > p {
+    text-align: center;
+    font-size: 1.2em;
+    padding-left: 22em;
+    padding-right: 22em;
+}
+
+.border-img {
+    width: 220px;
+}
+
+#atasKiri {
+    left: -3px;
+    top: 0;
+    transform: scaleX(-1) rotate(270deg);
+    animation-name: cornerLeft;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+}
+
+#atasKanan {
+    right: -2px;
+    top: 0;
+    transform: rotate(270deg);
+    animation-name: cornerRight;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+}
+
+#atasKanan2 {
+    right: -2px;
+    top: 0px;
+    transform: scaleX(-1) rotate(180deg);
+    animation-name: cornerMidSec;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+}
+
+#bawahKiri {
+    left: -2px;
+    bottom: 2px;
+    transform: rotate(90deg);
+    animation-name: cornerMidTrd;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+}
+
+#bawahKanan {
+    right: -2px;
+    bottom: 0px;
+    transform: rotate(0deg);
+    animation-name: cornerMidFirst;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+}
+
+#bawahKanan2 {
+    right: -2px;
+    bottom: 0px;
+    transform: rotate(0deg);
+    animation-name: cornerMidFirst;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+}
+
+#tengahBawah {
+    left: -3.8%;
+    bottom: 0px;
+    width: 9.5em;
+    transform: rotate(120deg);
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+}
+
+#tengahBawah3 {
+    left: -3.8%;
+    bottom: 0px;
+    width: 9.5em;
+    transform: rotate(120deg);
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+}
+
+#tengahAtas {
+    left: -3.8%;
+    top: 0px;
+    width: 9.5em;
+    transform: scaleY(-1) rotate(130deg);
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+}
+
+#tengahBawah2 {
+    right: -3.8%;
+    bottom: 0px;
+    width: 9.5em;
+    transform: scaleX(-1) rotate(120deg);
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+}
+
+#tengahAtas2 {
+    right: -3.8%;
+    top: 0px;
+    width: 9.5em;
+    transform: scaleY(-1) scaleX(-1) rotate(130deg);
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+}
+
+.arrowTop {
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    left: 30px;
+}
+
+.arrowTop::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 16px;
+}
+
+.arrowTop::after {
+    bottom: 24px;
+    border-color: transparent transparent rgb(210, 179, 2);
+}
+
+.arrowBottom {
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    left: 30px;
+}
+
+.arrowBottom::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 16px;
+}
+
+.arrowBottom::before {
+    top: 24px;
+    border-color: rgb(210, 179, 2) transparent transparent;
+}
+
+#bagTengah > figure {
+    margin: 0px;
+    width: 50vw;
+    position: relative;
+    object-fit: cover;
+    background-image: url('/content/images/2-person-prewedding-img.jpg');
+    background-position-y: 60%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+#bagTengah > figcaption {
+    font-family: 'Great Vibes', cursive;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#bagTengah > figcaption > p {
+    text-align: center;
+}
+
+#Husband {
+    width: 50vw;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+#Dan {
+    width: 50vw;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+#Wife {
+    width: 50vw;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+#caption {
+    width: 30vw;
+    font-size: 20px;
+    font-family: 'lato', sans-serif;
+    margin-top: 24px;
+    margin-left: 120px;
+    margin-right: 120px;
+    text-align: center;
+}
+
+.layer {
+    width: 50vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.364);
+}
+
+.layer-darker {
+    width: 50vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.526);
+}
+
+#bagTengah > figure > img {
+    width: 50vw;
+}
+
+#bagBawah {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#bagBawah > figure {
+    justify-self: flex-end;
+    margin: 0px;
+    width: 50vw;
+    position: relative;
+    object-fit: cover;
+    background-image: url('/content/images/1-content-image-top.jpg');
+    background-position-y: 60%;
+    background-size: 150%;
+    background-repeat: no-repeat;
+}
+
+#bagBawah > figcaption {
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#bagBawah > figcaption > iframe {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#isiDenah {
+    margin-top: 12px;
+    text-align: center;
+}
+
+#isiDenah > :is(p, h1){
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+#kalender {
+    width: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+}
+
+#eventDate {
+    color: white;
+    font-size: 1.4em;
+    font-weight: 550;
+    font-family: 'Lato', sans-serif;
+    top: 37%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+#jam {
+    width: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+}
+
+.eventTimeStyle {
+    color: white;
+    font-size: 1.4em;
+    font-weight: 550;
+    font-family: 'Lato', sans-serif;
+    top: 66%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+#eventTimeMid {
+    top: 70%;
+}
+
+#eventTimeEnd {
+    top: 74%;
+}
+
+#bagDoa {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#bagDoa figure {
+    justify-self: flex-end;
+    margin: 0px;
+    width: 50vw;
+    position: relative;
+    object-fit: cover;
+    background-image: url('/content/images/3-wish-content-image.jpg');
+    background-position-y: 60%;
+    background-size: 150%;
+    background-repeat: no-repeat;
+}
+
+#bagDoa figcaption {
+    width: 50vw;
+}
+
+#formDoa {
+    width: 50%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#doaTitle {
+    color: white;
+    text-align: center;
+}
+
+form {
+    color: white;
+    font-size: 1em;
+    text-align: center;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 2.5rem;
+    box-sizing: border-box;
+}
+
+#submitDoa {
+    padding: 4px 16px;
+    margin-top: 12px;
+    border-radius: 1rem;
+    transition: 0.4s;
+}
+
+#submitDoa:is(:hover, :focus) {
+    background-color: rgb(203, 203, 203);
+    transition: 0.4s;
+}
+
+#chatDoa {
+    margin: 12px 24px;
+    padding: 8px;
+    overflow: scroll;
+}
+
+.namaPengirim {
+    margin-left: calc(24px + 16px);
+    margin-top: 24px;
+    margin-bottom: 12px;
+    line-height: normal !important;
+}
+  
+.chat-bubble {
+    background-color: #ababab;
+    border-radius: 20px;
+    padding: 4px 16px;
+    margin-left: 24px;
+    position: relative;
+    word-wrap: break-word;
+    width: auto;
+    height: auto;
+}
+
+#doaChatTitle {
+    text-align: center;
+}
