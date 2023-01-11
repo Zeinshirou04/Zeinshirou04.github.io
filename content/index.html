@@ -16,8 +16,8 @@
     <title>Sultan and Melissa Wedding Invitation | Web Invitation Card</title>
 </head>
 <body>
-    <!-- Main Article or Content -->
-    <article>
+    <!-- Second Article or Content -->
+    <article id="articleKedua">
         <!-- Bagian Atas -->
         <section class="d-flex position-relative" id="bagAtas">
             <h1>Dear Mr. Arthur Carmenia, D.Cs. and Wife</h1>
@@ -72,15 +72,18 @@
                     <h1 id="doaTitle">Send us your Du'a</h1>
                     <form name="doaGuest" action="#bagDoa" onsubmit="kirimDoa()">
                         <label for="doa">Your Du'a</label><br>
-                        <input type="text" title="doa" name="doa" id="doa" placeholder="Write your Du'a" required><br>
+                        <input type="text" title="doa" name="doa" id="doa" value="" placeholder="Write your Du'a" required><br>
                         <label for="nama">Your Name</label><br>
-                        <input type="text" title="nama" name="nama" id="nama" placeholder="Write your name (Not Required)">
+                        <input type="text" title="nama" name="nama" id="nama" value="" placeholder="Write your name (Not Required)">
                         <input type="submit" value="Send" id="submitDoa">
                     </form>
                 </section>
             </figure>
-            <figcaption>
-                <section id="chatDoa">
+            <figcaption class="position-relative">
+                <section class="position-absolute" id="doaWrap">
+                    <h1 id="doaChatTitle">Wishes and Du'a</h1>
+                    <section id="chatDoa">
+                    </section>
                 </section>
             </figcaption>
         </section>

@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <!-- Preload and Prefetch -->
+    <link rel="prefetch" href="./styles/styles.css">
+    <link rel="preload" href="./images/dl.beatsnoop.com-3000-VYKZ3xysHr.jpg" as="image">
+    <link rel="preload" href="./images/floral-border-other-invite.png" as="image">
+    <link rel="preload" href="./images/floral-border-other-invite.png" as="image">
+    <link rel="preload" href="../content/images/border_frame_corner.png" as="image">
+    <link rel="preload" href="../content/images/border_third_corner.png" as="image">
+    <link rel="preload" href="./images/dl.beatsnoop.com-3000-VYKZ3xysHr.jpg" as="image">
+
     <!-- Import Viewport Width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <!-- Import External CSS -->
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Sultan and Melissa Wedding Invitation | Web Invitation Card</title>
 </head>
 <body>
-    <article class="container">
+    <article class="container" id="articleUtama">
         <section class="pos-relative" id="front-left">
             <img class="pos-absolute" src="./images/dl.beatsnoop.com-3000-VYKZ3xysHr.jpg" alt="Invitiation Card Front Layer Image" id="front-layer-image">
             <div class="pos-absolute layer"></div>
@@ -22,8 +31,8 @@
             <img class="pos-absolute border-flower" id="flower-center-top" src="./images/floral-border-other-invite.png" alt="">
             <h1>Special Wedding Invitation</h1>
             <h2>For :</h2>
-            <p id="guestName">Mr. Arthur Carmenia, B.Cs, M. Com, D.Cs</p>
-            <p>Ms. Leonie Victoire, B.sc, M.Sc</p>
+            <p id="guestNameHusband">Preview</p>
+            <p id="guestNameWife">Preview</p>
             <br>
             <p>We pleased you to attend our Wedding Ceremony</p>
             <p>Please open your Invitiation</p>
@@ -33,8 +42,125 @@
             </form>
             </section>
         </section>
+        <section class="popup" id="popup">
+            <div class="popup-content" id="outerPopup">
+                <div class="popup-header">
+                    <h2 id="titlePopUp">Ready to make your wedding card?</h2>
+                </div>
+                <div class="popup-body">
+                    <form name="formTemplate" id="formTemplate" action="#">
+                        <section id="formOne">
+                            <p id="bodyPopUp">Before we start, please fill the form below:</p>
+                            <p for="recepientInfo">Is the recepient married?</p>
+                            <input type="button" name="yes" value="Yes">
+                            <input type="button" name="no" value="No">
+                        </section>
+                        <section id="formTwoYes">
+                            <label for="recepientHus">Recepient Husband</label><br>
+                            <input type="text" name="recepientHus" id="recepientHus" placeholder="Write the Male Recipient here..."><br>
+                            <label for="recepientWife">Recepient Wife</label><br>
+                            <input type="text" name="recepientWife" id="recepientWife" placeholder="Write the Female Recipient here..."><br>
+                            <input type="button" name="nextYes" value="Next">
+                        </section>
+                        <section id="formTwoNo">
+                            <label for="recepient">Recepient's name</label><br>
+                            <input type="text" name="recepient" id="recepient" placeholder="Write the Recipient name here..."><br>
+                            <input type="button" name="nextNo" value="Next">
+                        </section>
+                        <section id="formThree">
+                            <label for="gloomName">Gloom's name</label><br>
+                            <input type="text" name="gloomName" id="gloomNames" placeholder="Write the Male Gloom here..." required><br>
+                            <label for="brideName">Bride's name</label><br>
+                            <input type="text" name="brideName" id="brideNames" placeholder="Write the Female Bride here..." required><br>
+                            <input type="submit" name="finish" value="Finish">
+                        </section>
+                    </form>
+                </div>
+        </section>
     </article>
+
+    <!-- Second Article or Content -->
+    <article id="articleKedua">
+        <!-- Bagian Atas -->
+        <section class="d-flex position-relative" id="bagAtas">
+            <h1 id="innerGuestName"></h1>
+            <p>We are delighted to invite you and your wife to join us in celebrating our wedding. We will be celebrating the foundation of our family at the event we will be holding. We are very happy to be sharing this special day with you and we hope you will be able to come and celebrate with us.</p>
+            <p>Sincerely,</p>
+            <p><p id="gloomName"></p> & <p id="brideName"></p></p>
+            <img src="../content/images/border_frame_corner.png" class="position-absolute border-img" alt="Border Image Corner" id="atasKiri">
+            <img src="../content/images/border_frame_corner.png" class="position-absolute border-img" alt="Border Image Corner" id="atasKanan">
+            <img src="../content/images/border_frame_corner.png" class="position-absolute border-img" alt="Border Image Corner" id="bawahKanan">
+            <img src="../content/images/border_frame_corner.png" class="position-absolute border-img" alt="Border Image Corner" id="bawahKiri">
+        </section>
+        <section class="d-flex position-relative" id="bagTengah">
+            <figure>
+                <div class="pos-absolute layer"></div>
+            </figure>
+            <figcaption class="d-flex position-relative">
+                <p id="gloomNameBig">Sultan Ahmed, B. Cs, M. Cs</p>
+                <p id="Dan">&</p>
+                <p id="brideNameBig">Melissa Pristina, B. Ec</p>
+                <p id="caption">Counted from 2nd January 2023 has been Married with promises and a dowry of 1Kg Pure Gold</p>
+                <img src="../content/images/border_third_corner.png" class="position-absolute border-img" alt="Border Image Corner" id="tengahBawah2">
+                <img src="../content/images/border_third_corner.png" class="position-absolute border-img" alt="Border Image Corner" id="tengahBawah">
+            </figcaption>
+            <img src="../content/images/border_frame_corner.png" class="position-absolute border-img" alt="Border Image Corner" id="atasKanan2">
+        </section>
+        <section class="d-flex position-relative" id="bagBawah">
+            <figcaption class="d-flex position-relative">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6806.519164166988!2d110.38473970522638!3d-6.955193199246089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70f359c3046965%3A0x598dbf83dc46027f!2sMarina%20Convention%20Center!5e0!3m2!1sid!2sid!4v1672043533707!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <section id="isiDenah">
+                    <h1>Held at:</h1>
+                    <p>Marina Convention Center, Villa Marina Street, No. 1, West Semarang</p>
+                </section>
+                <img src="../content/images/border_third_corner.png" class="position-absolute border-img" alt="Border Image Corner" id="tengahBawah">
+                <img src="../content/images/border_third_corner.png" class="position-absolute border-img" alt="Border Image Corner" id="tengahAtas">
+                <img src="../content/images/border_third_corner.png" class="position-absolute border-img" alt="Border Image Corner" id="tengahAtas2">
+                <img src="../content/images/border_third_corner.png" class="position-absolute border-img" alt="Border Image Corner" id="tengahBawah2">
+            </figcaption>
+            <figure class="position-relative">
+                <div class="position-absolute layer-darker"></div>
+                <img class="position-absolute" src="../content/images/pngfind.com-calendar-icon-png-1819644.png" alt="Calendar Image" id="kalender">
+                <p class="position-absolute" id="eventDate">Sunday, 8th January 2023</p>
+                <img class="position-absolute" src="../content/images/toppng.com-browser-history-clock-icon-vector-white-541x541.png" alt="Clock Image" id="jam">
+                <p class="position-absolute eventTimeStyle" id="eventTimeBeg">07.00 AM</p>
+                <p class="position-absolute eventTimeStyle" id="eventTimeMid">Until</p>
+                <p class="position-absolute eventTimeStyle" id="eventTimeEnd">02.00 PM</p>
+            </figure>
+        </section>
+        <section class="d-flex position-relative" id="bagDoa">
+            <figure>
+                <div class="position-absolute layer-darker"></div>
+                <section class="position-absolute" id="formDoa">
+                    <h1 id="doaTitle">Send us your Du'a</h1>
+                    <form name="doaGuest" action="#" method="post">
+                        <label for="doa">Your Du'a</label><br>
+                        <input type="text" title="doa" name="doa" id="doa" value="" placeholder="Write your Du'a" required><br>
+                        <label for="nama">Your Name</label><br>
+                        <input type="text" title="nama" name="nama" id="nama" value="" placeholder="Write your name (Not Required)">
+                        <input type="submit" value="Send" id="submitDoa">
+                    </form>
+                </section>
+            </figure>
+            <figcaption class="position-relative">
+                <section class="position-absolute" id="doaWrap">
+                    <h1 id="doaChatTitle">Wishes and Du'a</h1>
+                    <section id="chatDoa">
+                    </section>
+                </section>
+            </figcaption>
+        </section>
+        <!-- <a href="#" title="atas" id="keAtas">
+            <div class="arrowTop position-fixed"></div>
+        </a>
+        <a href="#" title="bawah" id="keBawah">
+            <div class="arrowBottom position-fixed"></div>
+        </a> -->
+    </article>
+
+    <!-- BGM for the web -->
+    <audio src="./music/I Choose you Wedding BGM.mp3" id="bgm"></audio>
     <!-- Import External JavaScript -->
-    <script src="./config/config.js"></script>
+    <script src="./config/config.js" id="firstJs"></script>
 </body>
 </html>
