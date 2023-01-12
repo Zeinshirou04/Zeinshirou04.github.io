@@ -40,6 +40,9 @@ var changeHtml = function (event) {
     }, 1200);
 }
 
+var formOne = document.getElementById("EO");
+var formTwo = document.getElementById("Public");
+
 var form = document.formTemplate;
 var guestNameHusband = document.getElementById("guestNameHusband"), 
     innerGuestName = document.getElementById("innerGuestName"),
@@ -233,4 +236,65 @@ formDoa.onsubmit = function(event) {
 }
 
 formDoa.addEventListener = ('submit', function(event) {
+})
+
+var menuHover = document.getElementById("hoverNav"),
+    menuDown = document.getElementById("menuDown"),
+    menuUp = document.getElementById("menuUp"),
+    menuWa = document.getElementById("menuWa"),
+    menuMusic = document.getElementById("menuMusic");
+    menuMain = document.getElementById("menu"),
+    menuMainImg = document.getElementById("menuMainImage"),
+    menuMusicTombol = document.getElementById("musicIcon"),
+    menuUpTombol = document.getElementById("upIcon"),
+    menuDownTombol = document.getElementById("downIcon"),
+    menuWaTombol = document.getElementById("waIcon");
+let active = false;
+
+menuHover.addEventListener("mouseover", function (event) {
+    menuDown.style.display = "block";
+    menuUp.style.display = "block";
+    menuWa.style.display = "block";
+    menuMusic.style.display = "block";
+    menuDown.style.animationName = "menuDownIn";
+    menuUp.style.animationName = "menuUpIn";
+    menuWa.style.animationName = "menuWaIn";
+    menuMusic.style.animationName = "menuMusicIn";
+    menuMainImg.style.transform = "rotate(180deg)";
+})
+
+menuHover.addEventListener("mouseout", function (event) {
+    if(active) return;
+        menuDown.style.animationName = "menuDownOut";
+        menuUp.style.animationName = "menuUpOut";
+        menuWa.style.animationName = "menuWaOut";
+        menuMusic.style.animationName = "menuMusicOut";
+        menuMainImg.style.transform = "rotate(0deg)";
+})
+
+menuHover.addEventListener("click", function() {
+    active = true;
+})
+
+menuHover.addEventListener("dblclick", function() {
+    active = false;
+})
+
+document.addEventListener("click", function(event) {
+    if((event.target != menuMainImg) && (event.target != menuDownTombol) && (event.target != menuUpTombol) && (event.target != menuWaTombol) && (event.target != menuMusicTombol) && (event.target != menuHover)) {
+        active = false;
+        menuDown.style.animationName = "menuDownOut";
+        menuUp.style.animationName = "menuUpOut";
+        menuWa.style.animationName = "menuWaOut";
+        menuMusic.style.animationName = "menuMusicOut";
+        menuMainImg.style.transform = "rotate(0deg)";
+    }
+})
+
+menuMusicTombol.addEventListener = ('click', function(event) {
+    audio.pause();
+})
+
+menuMusicTombol.addEventListener = ('dblclick', function(event) {
+    audio.play();
 })

@@ -19,6 +19,126 @@ html {
         opacity: 100%;
     }
 }
+@keyframes smileySpinIn {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes smileySpinOut {
+    from {
+        transform: rotate(180deg);
+    } to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 100%;
+    } to {
+        opacity: 0%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    } to {
+        opacity: 100%;
+    }
+}
+
+@keyframes swipeUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes menuWaIn {
+    from {
+        transform: translateX(0em);
+        opacity: 0%;
+    } to {
+        transform: translateX(calc(4.5em * 1));
+        opacity: 100%;
+    }
+}
+
+@keyframes menuWaOut {
+    from {
+        transform: translateX(calc(4.5em * 1));
+        opacity: 100%;
+    } to {
+        transform: translateX(0em);
+        opacity: 0%;
+    }
+}
+
+@keyframes menuMusicIn {
+    from {
+        transform: translateX(0em);
+        opacity: 0%;
+    } to {
+        transform: translateX(calc(4.5em * 2));
+        opacity: 100%;
+    }
+}
+
+@keyframes menuMusicOut {
+    from {
+        transform: translateX(calc(4.5em * 2));
+        opacity: 100%;
+    } to {
+        transform: translateX(0em);
+        opacity: 0%;
+    }
+}
+
+@keyframes menuUpIn {
+    from {
+        transform: translateX(0em);
+        opacity: 0%;
+    } to {
+        transform: translateX(calc(4.5em * 3));
+        opacity: 100%;
+    }
+}
+
+@keyframes menuUpOut {
+    from {
+        transform: translateX(calc(4.5em * 3));
+        opacity: 100%;
+    } to {
+        transform: translateX(0em);
+        opacity: 0%;
+    }
+}
+
+@keyframes menuDownIn {
+    from {
+        transform: translateX(0em);
+        opacity: 0%;
+    } to {
+        transform: translateX(calc(4.5em * 4));
+        opacity: 100%;
+    }
+}
+
+@keyframes menuDownOut {
+    from {
+        transform: translateX(calc(4.5em * 4));
+        opacity: 100%;
+    } to {
+        transform: translateX(0em);
+        opacity: 0%;
+    }
+}
 
 @keyframes cornerLeft {
     0% {
@@ -555,4 +675,111 @@ input[type=text] {
 
 #bagDoa > figcaption {
     overflow: hidden;
+}
+
+header {
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+}
+
+#hoverNav {
+    width: 360px;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.menuItems img {
+    margin-left: 12%;
+    margin-top: 12%;
+    width: 30px;
+}
+
+#menuMusic img {
+    margin-left: 9%;
+    margin-top: 12%;
+    width: 30px;
+}
+
+#menuUp img {
+    margin-left: 12%;
+    margin-top: 7%;
+    width: 30px;
+}
+
+#menuDown img {
+    transform: rotate(180deg);
+    margin-left: 12%;
+    margin-top: 15%;
+    width: 30px;
+}
+
+#menu img {
+    margin: 0px;
+    width: 100%;
+    transition: 1s;
+}
+
+#menu img:is(:hover) {
+    margin: 0px;
+    width: 100%;
+    transition: 1s;
+}
+
+.menuItems {
+    position: absolute;
+    margin : 12px 8px 8px 12px;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+
+.menuItems:is(:hover) {
+    cursor: pointer;
+}
+
+#menu {
+    background-color: transparent;
+}
+
+#menu:hover {
+}
+
+#menuWa {
+    display: none;
+    animation-name: none;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+}
+
+#menuMusic {
+    display: none;
+    animation-name: none;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+}
+
+#menuUp {
+    display: none;
+    animation-name: none;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+}
+
+#menuDown {
+    display: none;
+    animation-name: none;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+}
+
+:where(button, input:is([type=submit], [type=button])):hover {
+    cursor: pointer;
 }
