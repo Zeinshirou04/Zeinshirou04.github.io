@@ -295,7 +295,7 @@ input[type=text]::placeholder {
     text-align: center;
 }
 
-#formOne, #formTwoYes, #formTwoNo, #formThree {
+#formOne, #formTwoYes, #formTwoNo, #formThree, #formFour, #formFive {
     height: 180px;
 }
 
@@ -322,6 +322,103 @@ input[type=text]::placeholder {
     display: none;
 }
 
+#formFour {
+    margin-top: 12px;
+    display: none;
+}
+
+#formFive {
+    margin-top: 12px;
+    display: none;
+}
+
+#formFourSubmit input[type=submit] {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#formFiveSubmit input[type=submit] {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #articleKedua {
     display: none;
+}
+
+#formFourContainer {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+#formFiveContainer {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+#formFourContainer > section {
+    margin: 0px 12px;
+}
+
+#formFourSubmit {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+#formFourSubmit input:is([type=button], [type=submit]) {
+    border: 0px;
+    width: 3.8em;
+    font-size: 1em;
+    padding: 0.25em 0.7em;
+    border-radius: 1em;
+    margin-top: 0.4em;
+    transition: 500ms;
+    background-color: white;
+}
+
+#formFourSubmit input:is([type=button], [type=submit]):is(:hover, :focus) {
+    border: 0px;
+    width: 3.8em;
+    font-size: 1em;
+    padding: 0.25em 0.7em;
+    border-radius: 1em;
+    margin-top: 0.4em;
+    transition: 500ms;
+    background-color: rgb(203, 203, 203);
+}
+
+#formFiveSubmit input:is([type=button], [type=submit]) {
+    border: 0px;
+    width: 3.8em;
+    font-size: 1em;
+    padding: 0.25em 0.7em;
+    border-radius: 1em;
+    margin-top: 0.4em;
+    transition: 500ms;
+    background-color: white;
+}
+
+#formFiveSubmit input:is([type=button], [type=submit]):is(:hover, :focus) {
+    border: 0px;
+    width: 3.8em;
+    font-size: 1em;
+    padding: 0.25em 0.7em;
+    border-radius: 1em;
+    margin-top: 0.4em;
+    transition: 500ms;
+    background-color: rgb(203, 203, 203);
+}
+
+#formMap {
+    margin-left: 1em;
+}
+
+#embedMaps {
+    border: 0px;
+    padding: 4px 12px;
+    border-radius: 1em;
+    margin: 8px 0px;
 }

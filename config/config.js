@@ -21,7 +21,6 @@ var changeHtml = function (event) {
     setTimeout(function () {
         mainBody.style.display = 'none';
         var secStyle = document.querySelector("link[rel='stylesheet']");
-        var secJs = document.getElementById("firstJs");
         var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css';
@@ -42,13 +41,18 @@ var changeHtml = function (event) {
 }
 
 var form = document.formTemplate;
-var guestNameHusband = document.getElementById("guestNameHusband");
-var innerGuestName = document.getElementById("innerGuestName");
-var guestNameWife = document.getElementById("guestNameWife");
-var gloomName = document.getElementById("gloomName");
-var brideName = document.getElementById("brideName");
-var gloomNameBig = document.getElementById("gloomNameBig");
-var brideNameBig = document.getElementById("brideNameBig");
+var guestNameHusband = document.getElementById("guestNameHusband"), 
+    innerGuestName = document.getElementById("innerGuestName"),
+    guestNameWife = document.getElementById("guestNameWife"),
+    gloomName = document.getElementById("gloomName"),
+    brideName = document.getElementById("brideName"),
+    gloomNameBig = document.getElementById("gloomNameBig"),
+    brideNameBig = document.getElementById("brideNameBig"),
+    marriedDate = document.getElementById("marriedDate"),
+    dowryName = document.getElementById("dowryName"),
+    eventDate = document.getElementById("eventDate")
+    eventTimeStart = document.getElementById("eventTimeBeg"),
+    eventTimeEnd = document.getElementById("eventTimeEnd");
 
 form.yes.onclick = function (event) {
     var innerFormOne = document.getElementById('formOne');
@@ -81,6 +85,7 @@ form.no.onclick = function (event) {
 }
 
 form.nextYes.onclick = function (event) {
+    if(form.recepientHus.value == '' || form.recepientWife.value == '') return
     var innerFormThree = document.getElementById('formThree');
     var innerFormTwo = document.getElementById('formTwoYes');
     guestNameHusband.innerHTML = form.recepientHus.value;
@@ -100,6 +105,7 @@ form.nextYes.onclick = function (event) {
 
 form.nextNo.onclick = function (event) {
     guestNameWife.remove();
+    if(form.recepient.value == '') return
     var innerFormThree = document.getElementById('formThree');
     var innerFormTwo = document.getElementById('formTwoNo');
     guestNameHusband.innerHTML = form.recepient.value;
@@ -116,10 +122,11 @@ form.nextNo.onclick = function (event) {
     }, 1000);
 }
 
-form.onsubmit = function (event) {
+form.nextBride.onclick = function (event) {
+    if(form.gloomName.value == '' || form.brideName.value == '') return
     event.preventDefault();
-    var innerFormTwo = document.getElementById('formTwo');
     var innerFormThree = document.getElementById('formThree');
+    var innerFormFour = document.getElementById('formFour');
     gloomName.innerHTML = form.gloomName.value.split(" ")[0];
     brideName.innerHTML = form.brideName.value.split(" ")[0];
     gloomNameBig.innerHTML = form.gloomName.value;
@@ -127,15 +134,60 @@ form.onsubmit = function (event) {
     innerFormThree.style.animationName = 'fadeOut';
     innerFormThree.style.animationDuration = '0.5s';
     innerFormThree.style.animationFillMode = 'forwards';
+    innerFormFour.style.animationName = 'fadeIn';
+    innerFormFour.style.animationDuration = '0.5s';
+    innerFormFour.style.animationFillMode = 'forwards';
     setTimeout(function () {
         innerFormThree.style.display = 'none';
+        innerFormFour.style.display = 'block'
+    }, 1000);
+}
+
+form.nextDate.onclick = function (event) {
+    if(form.marriedDate == '' || form.dowry.value == '' || form.reservationDate.value == '' || form.reservationTime.value == '') return
+    event.preventDefault();
+    var innerFormFour = document.getElementById('formFour');
+    var innerFormFive = document.getElementById('formFive');
+    marriedDate.innerHTML = form.marriedDates.value;
+    dowryName.innerHTML = form.dowry.value;
+    eventDate.innerHTML = form.reservationDate.value;
+    eventTimeStart.innerHTML = form.reservationTime.value.split("-")[0];
+    eventTimeEnd.innerHTML = form.reservationTime.value.split("-")[1];
+    innerFormFour.style.animationName = 'fadeOut';
+    innerFormFour.style.animationDuration = '0.5s';
+    innerFormFour.style.animationFillMode = 'forwards';
+    setTimeout(function () {
+        innerFormFour.style.display = 'none';
+        innerFormFive.style.display = 'block';
+        document.getElementById("outerPopup").style.marginBottom = '220px'
+    }, 1000);
+}
+
+form.finish.onclick = function (event) {
+    if (form.eventAddress.value == '' || form.embedMaps.value == '') return
+    event.preventDefault();
+    var innerFormFive = document.getElementById('formFive');
+    var titlePopup = document.getElementById("titlePopUp");
+    var alamatAcara = document.getElementById("eventAddressReady");
+    var mapsAcara = document.getElementById("iframeMaps");
+    alamatAcara.innerHTML = form.eventAddress.value;
+    mapsAcara.innerHTML = form.embedMaps.value;
+    innerFormFive.style.animationName = 'fadeOut';
+    innerFormFive.style.animationDuration = '0.5s';
+    innerFormFive.style.animationFillMode = 'forwards';
+    titlePopup.style.animationName = 'fadeOut';
+    titlePopup.style.animationDuration = '0.5s';
+    titlePopup.style.animationFillMode = 'forwards';
+    setTimeout(function () {
+        document.getElementById("outerPopup").style.marginBottom = '0px'
+        innerFormFive.style.display = 'none';
+        titlePopup.style.display = 'none';
         document.getElementById("outerPopup").innerHTML = "<h2>You Ready To Go!</h2>";
     }, 600);
     setTimeout(function () {
         document.getElementById("popup").style.display = 'none';
     }, 1100);
 }
-
 
 var formDoa = document.doaGuest
 var doaJadi = {

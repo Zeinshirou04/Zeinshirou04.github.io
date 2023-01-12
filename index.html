@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Preload and Prefetch -->
-    <link rel="prefetch" href="./styles/styles.css">
-    <link rel="preload" href="./images/dl.beatsnoop.com-3000-VYKZ3xysHr.jpg" as="image">
-    <link rel="preload" href="./images/floral-border-other-invite.png" as="image">
-    <link rel="preload" href="./images/floral-border-other-invite.png" as="image">
-    <link rel="preload" href="../content/images/border_frame_corner.png" as="image">
-    <link rel="preload" href="../content/images/border_third_corner.png" as="image">
-    <link rel="preload" href="./images/dl.beatsnoop.com-3000-VYKZ3xysHr.jpg" as="image">
-
     <!-- Import Viewport Width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -57,28 +48,63 @@
                         </section>
                         <section id="formTwoYes">
                             <label for="recepientHus">Recepient Husband</label><br>
-                            <input type="text" name="recepientHus" id="recepientHus" placeholder="Write the Male Recipient here..."><br>
+                            <input type="text" name="recepientHus" id="recepientHus" placeholder="Write the Male Recipient here..." required><br>
                             <label for="recepientWife">Recepient Wife</label><br>
-                            <input type="text" name="recepientWife" id="recepientWife" placeholder="Write the Female Recipient here..."><br>
-                            <input type="button" name="nextYes" value="Next">
+                            <input type="text" name="recepientWife" id="recepientWife" placeholder="Write the Female Recipient here..." required><br>
+                            <input type="submit" name="nextYes" value="Next">
                         </section>
                         <section id="formTwoNo">
                             <label for="recepient">Recepient's name</label><br>
-                            <input type="text" name="recepient" id="recepient" placeholder="Write the Recipient name here..."><br>
-                            <input type="button" name="nextNo" value="Next">
+                            <input type="text" name="recepient" id="recepient" placeholder="Write the Recipient name here..." required><br>
+                            <input type="submit" name="nextNo" value="Next">
                         </section>
                         <section id="formThree">
                             <label for="gloomName">Gloom's name</label><br>
                             <input type="text" name="gloomName" id="gloomNames" placeholder="Write the Male Gloom here..." required><br>
                             <label for="brideName">Bride's name</label><br>
                             <input type="text" name="brideName" id="brideNames" placeholder="Write the Female Bride here..." required><br>
-                            <input type="submit" name="finish" value="Finish">
+                            <input type="submit" name="nextBride" value="Next">
+                        </section>
+                        <section id="formFour">
+                            <div id="formFourContainer">
+                                <section>
+                                    <label for="marriedDates">When you were married?</label><br>
+                                    <input type="text" name="marriedDates" id="marriedDates" placeholder="Example: 2nd December 2022" required><br>
+                                    <label for="dowry">What is the dowry?</label><br>
+                                    <input type="text" name="dowry" id="dowrys" placeholder="Example: 1kg of gold" required><br>
+                                </section>
+                                <section>
+                                    <label for="reservationDate">When the reservation held??</label><br>
+                                    <input type="text" name="reservationDate" id="reservationDates" placeholder="Example: Sunday, 8th December 2022" required><br>
+                                    <label for="reservationTime">What time?</label><br>
+                                    <input type="text" name="reservationTime" id="reservationTimes" placeholder="Example: 10.00 AM - 02.00 PM" required><br>
+                                </section>
+                            </div>
+                            <div id="formFourSubmit">
+                                <input type="submit" name="nextDate" value="Next">
+                            </div>
+                        </section>
+                        <section id="formFive">
+                            <div id="formFiveContainer">
+                                <section>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DoermQXqTuM?" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </section>
+                                <section id="formMap">
+                                    <label for="eventAddress">Where the event will be held?</label><br>
+                                    <input type="text" name="eventAddress" id="eventAddress" placeholder="Example: (In the video)" required><br>
+                                    <label for="embedMaps">Paste the embed maps</label><br>
+                                    <textarea type="text" name="embedMaps" id="embedMaps" placeholder="Example: (In the video)" rows="12" cols="20" required></textarea><br>
+                                </section>
+                            </div>
+                            <div id="formFiveSubmit">
+                                <input type="submit" name="finish" value="Finish">
+                            </div>
                         </section>
                     </form>
                 </div>
+            </div>
         </section>
     </article>
-
     <!-- Second Article or Content -->
     <article id="articleKedua">
         <!-- Bagian Atas -->
@@ -100,7 +126,7 @@
                 <p id="gloomNameBig">Sultan Ahmed, B. Cs, M. Cs</p>
                 <p id="Dan">&</p>
                 <p id="brideNameBig">Melissa Pristina, B. Ec</p>
-                <p id="caption">Counted from 2nd January 2023 has been Married with promises and a dowry of 1Kg Pure Gold</p>
+                <p id="caption">Counted from <span id="marriedDate">asas</span> has been Married with promises and a dowry of <span id="dowryName"></span></p>
                 <img src="../content/images/border_third_corner.png" class="position-absolute border-img" alt="Border Image Corner" id="tengahBawah2">
                 <img src="../content/images/border_third_corner.png" class="position-absolute border-img" alt="Border Image Corner" id="tengahBawah">
             </figcaption>
@@ -108,10 +134,12 @@
         </section>
         <section class="d-flex position-relative" id="bagBawah">
             <figcaption class="d-flex position-relative">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6806.519164166988!2d110.38473970522638!3d-6.955193199246089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70f359c3046965%3A0x598dbf83dc46027f!2sMarina%20Convention%20Center!5e0!3m2!1sid!2sid!4v1672043533707!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <section id="iframeMaps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6806.519164166988!2d110.38473970522638!3d-6.955193199246089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70f359c3046965%3A0x598dbf83dc46027f!2sMarina%20Convention%20Center!5e0!3m2!1sid!2sid!4v1672043533707!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
                 <section id="isiDenah">
                     <h1>Held at:</h1>
-                    <p>Marina Convention Center, Villa Marina Street, No. 1, West Semarang</p>
+                    <p id="eventAddressReady">Marina Convention Center, Villa Marina Street, No. 1, West Semarang</p>
                 </section>
                 <img src="../content/images/border_third_corner.png" class="position-absolute border-img" alt="Border Image Corner" id="tengahBawah">
                 <img src="../content/images/border_third_corner.png" class="position-absolute border-img" alt="Border Image Corner" id="tengahAtas">
@@ -150,17 +178,12 @@
                 </section>
             </figcaption>
         </section>
-        <!-- <a href="#" title="atas" id="keAtas">
-            <div class="arrowTop position-fixed"></div>
-        </a>
-        <a href="#" title="bawah" id="keBawah">
-            <div class="arrowBottom position-fixed"></div>
-        </a> -->
     </article>
 
     <!-- BGM for the web -->
     <audio src="./music/I Choose you Wedding BGM.mp3" id="bgm"></audio>
+
     <!-- Import External JavaScript -->
-    <script src="./config/config.js" id="firstJs"></script>
+    <script src="/config/config.js" id="firstJs"></script>
 </body>
 </html>
