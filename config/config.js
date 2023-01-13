@@ -1,6 +1,29 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
 
+var formOne = document.getElementById("EO");
+var formTwo = document.getElementById("Public");
+
+var menuHover = document.getElementById("hoverNav"),
+    menuDown = document.getElementById("menuDown"),
+    menuUp = document.getElementById("menuUp"),
+    menuWa = document.getElementById("menuWa"),
+    menuMusic = document.getElementById("menuMusic");
+    menuMain = document.getElementById("menu"),
+    menuMainImg = document.getElementById("menuMainImage"),
+    menuMusicTombol = document.getElementById("musicIcon"),
+    menuUpTombol = document.getElementById("upIcon"),
+    menuDownTombol = document.getElementById("downIcon"),
+    menuWaTombol = document.getElementById("waIcon");
+
+var classMenu = document.querySelectorAll(".menuItems"),
+    bagAtas = document.getElementById("bagAtas"),
+    bagTengah = document.getElementById("bagTengah"),
+    bagBawah = document.getElementById("bagBawah"),
+    bagDoa = document.getElementById("bagDoa");
+
+let active = false;
+
 console.log(`The width is ${width} and the height is ${height}`);
 
 var guestName = function () {
@@ -39,9 +62,6 @@ var changeHtml = function (event) {
         }
     }, 1200);
 }
-
-var formOne = document.getElementById("EO");
-var formTwo = document.getElementById("Public");
 
 var form = document.formTemplate;
 var guestNameHusband = document.getElementById("guestNameHusband"), 
@@ -238,19 +258,6 @@ formDoa.onsubmit = function(event) {
 formDoa.addEventListener = ('submit', function(event) {
 })
 
-var menuHover = document.getElementById("hoverNav"),
-    menuDown = document.getElementById("menuDown"),
-    menuUp = document.getElementById("menuUp"),
-    menuWa = document.getElementById("menuWa"),
-    menuMusic = document.getElementById("menuMusic");
-    menuMain = document.getElementById("menu"),
-    menuMainImg = document.getElementById("menuMainImage"),
-    menuMusicTombol = document.getElementById("musicIcon"),
-    menuUpTombol = document.getElementById("upIcon"),
-    menuDownTombol = document.getElementById("downIcon"),
-    menuWaTombol = document.getElementById("waIcon");
-let active = false;
-
 menuHover.addEventListener("mouseover", function (event) {
     menuDown.style.display = "block";
     menuUp.style.display = "block";
@@ -273,7 +280,11 @@ menuHover.addEventListener("mouseout", function (event) {
 })
 
 menuHover.addEventListener("click", function() {
-    active = true;
+    if(active) {
+        active = false;
+    } else {
+        active = true;
+    } 
 })
 
 menuHover.addEventListener("dblclick", function() {
@@ -292,9 +303,17 @@ document.addEventListener("click", function(event) {
 })
 
 menuMusicTombol.addEventListener = ('click', function(event) {
-    audio.pause();
+    if(audio.play()) {
+        audio.pause()
+    } else if(audio.pause()) {
+        audio.play()
+    }
 })
 
-menuMusicTombol.addEventListener = ('dblclick', function(event) {
-    audio.play();
+menuMusic.addEventListener = ('click', function(event) {
+    if(audio.play()) {
+        audio.pause()
+    } else if(audio.pause()) {
+        audio.play()
+    }
 })

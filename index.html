@@ -25,7 +25,9 @@
                 <img src="./content/images/music-logo.png" alt="Music Icon" id="musicIcon">
             </div>
             <div class="menuItems" id="menuWa">
-                <img src="./content/images/logo-whatsapp-png-46041.png" alt="WhatsApp Logo" id="waIcon">
+                <a href="https://api.whatsapp.com/send?phone=62895321233687&text=Hello,%20Mr%20Farras.%20We%20would%20like%20to%20ask%20something%20about%20your%20website.%20We%20hope%20you%20can%20spare%20your%20time%20to%20answer%20our%20question%20or%20hear%20our%20critic%20and%20suggestion.">
+                    <img src="./content/images/logo-whatsapp-png-46041.png" alt="WhatsApp Logo" id="waIcon">
+                </a>
             </div>
             <div class="menuItems" id="menu">
                 <img src="./content/images/menu-icon.png" alt="Smiley Face" id="menuMainImage">
@@ -113,7 +115,7 @@
                                     <label for="eventAddress">Where the event will be held?</label><br>
                                     <input type="text" name="eventAddress" id="eventAddress" placeholder="Example: (In the video)" required><br>
                                     <label for="embedMaps">Paste the embed maps</label><br>
-                                    <textarea type="text" name="embedMaps" id="embedMaps" placeholder="Example: (In the video)" rows="12" cols="20" required></textarea><br>
+                                    <textarea type="text" name="embedMaps" id="embedMaps" pattern="^<iframe[^>]*>.*<\/iframe>$" title="Only <iframe> tag allowed" placeholder="Example: (In the video)" rows="12" cols="20" required></textarea><br>
                                 </section>
                             </div>
                             <div id="formFiveSubmit">
